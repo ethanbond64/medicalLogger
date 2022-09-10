@@ -1,0 +1,10 @@
+.idea/
+*.DS_Store
+/venv
+*.db
+*.pyc
+*.sym
+.todo
+*.env
+.env
+npm-debug.log*
