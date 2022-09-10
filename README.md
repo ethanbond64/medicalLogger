@@ -35,5 +35,6 @@ Routes:
 - Upload - accept a file/file image, scrape it, safe to db
 - List - list all contents in the db, ideally with search - use query params
 - Share - Get a list of files (or if no time default list of all files) add ass query params to the list url - return this link
+^ Unneccesarry -- this one can be done from the client side
 
 CV -> just scrape all words off of the file

@@ -62,4 +62,4 @@ def createFile(title):
             fileType=scraped_type,
             filePath=generated_filename,
         ).save()
-        return make_response(jsonify({"Data": record.json()}), 200)
+        return make_response(jsonify({"Record": record.json()}), 200)
