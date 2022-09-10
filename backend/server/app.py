@@ -9,8 +9,8 @@ def create_app():
     app.config.from_pyfile("utils/settings.py", silent=True)
     db.init_app(app)
     # uncomment this for first run
-    db.drop_all(app=app)
-    db.create_all(app=app)
+    # db.drop_all(app=app)
+    # db.create_all(app=app)
     app.register_blueprint(main)
 
     return app

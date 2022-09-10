@@ -2,7 +2,7 @@ import os
 from urllib import request
 from uuid import uuid4
 from flask import Blueprint, jsonify, make_response
-from models import Record
+from backend.server.blueprints.main.models import Record
 from sqlalchemy import desc, or_
 from flask_cors import CORS
 
