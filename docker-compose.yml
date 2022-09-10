@@ -1,0 +1,46 @@
+version: '2'
+
+services:
+  postgres:
+    image: 'postgres:9.5'
+    env_file:
+      - '.env'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+    ports:
+      - '5432:5432'
+
+  extension:
+    build: './extension'
+    command: npm run watch
+    volumes:
+      - './extension/:/extension'
+      - '/extension/node_modules'
+
+  frontend:
+    build: './frontend'
+    command: npm run start
+    stdin_open: true
+    ports:
+      - '3000:3000'
+    volumes:
+      - './frontend/:/frontend'
+      - '/frontend/node_modules'
+
+  server:
+    build: backend/.
+    command: >
+      gunicorn -b 0.0.0.0:8000 
+        -w 4
+        --access-logfile -
+        --reload
+        "backend.server.app:create_app()"
+    env_file:
+      - '.env'
+    volumes:
+      - './backend:/home/backend'
+    ports:
+      - '8000:8000'
+
+volumes:
+  postgres:
