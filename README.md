@@ -18,5 +18,15 @@ Use Case:
 
 Views:
 - Upload page -> Upload picture (button for camera too) -> title input
-- Document list -> react/tailwind grid
+- Document list -> react/tailwind grid **Add search if you have time
 - Share page -> click button give url
+
+Data Model:
+Files - 
+ - id
+ - title
+ - formType - string (generated)
+ - formDate - datetime (generated)
+ - formContent - string  - all content in the document (for search) (generated)
+ - formInfo - json  - future feature(generated)
+ - path (path in uploads folder)
