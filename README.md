@@ -19,7 +19,7 @@ Use Case:
 Views:
 - Upload page -> Upload picture (button for camera too) -> title input
 - Document list -> react/tailwind grid **Add search if you have time
-- Share page -> click button give url
+- Share page -> click button give url **This can just be a button on the main form
 
 Data Model:
 Files - 
