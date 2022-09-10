@@ -1,7 +1,6 @@
 import os
-from urllib import request
 from uuid import uuid4
-from flask import Blueprint, jsonify, make_response
+from flask import Blueprint, jsonify, make_response, request
 from backend.server.blueprints.main.models import Record
 from sqlalchemy import desc, or_
 from flask_cors import CORS
@@ -58,7 +57,7 @@ def createFile(title):
 
         record = Record(
             title=title,
-            fileContents=scraped_contents,
+            fileContent=scraped_contents,
             fileType=scraped_type,
             filePath=generated_filename,
         ).save()
