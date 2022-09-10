@@ -18,7 +18,6 @@ function Routing() {
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/upload/file" element={<UploadForm />} />
-          <Route path="/share/file" element={<ShareForm />} />
         </Routes>
       </div>
     </Router>

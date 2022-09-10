@@ -9,7 +9,7 @@ function Navbar() {
             </Link>
             <div className={`mt-8 absolute inset-y-0 right-0`}>
                 <a className={`inline-block border rounded py-1 px-3 bg-indigo-900 text-white mr-4`}>
-                    <Link to="/create/video">Upload Files</Link>
+                    <Link to="/upload/file">Upload Files</Link>
                 </a>
                 <div className={`inline-block border rounded py-1 px-3 bg-indigo-900 text-white mr-4`}>
                     Share
