@@ -8,3 +8,7 @@
 *.env
 .env
 npm-debug.log*
+
+# Uploaded files 
+backend/server/static/uploads/*
+!backend/server/static/uploads/.keep
